@@ -1,0 +1,34 @@
+S3:
+    - are a universal name space
+    - Upload object to S3 receive HTTP 200
+    - Encrypt :
+      - Client side
+      - Server side:
+          - SSE-S3
+          - SSE-KMS
+          - SSE-C
+    - Control access to buckets using either a bucket ACL or Polices
+    - Default buckets are private
+
+  * Version:
+      Store all versions of an object ( all writes and delete)
+      Great backup tool
+      Once enable, can't be disabled, only suspended
+      Integrates with Lifecycle rules
+      Versioning's MFA Delete capability.
+
+  * Replicate:
+      Versioning must be enabled on both source and destination buckets
+      Regions must be unique
+      Files in an existing bucket are not replicated automatically.
+      Delete markers are replicated
+      Delete individual versions/markers will not be replicated.
+      Not cp permission
+
+  * Lifecycle management:
+      Used in conjunction with versioning
+      Can be applied to current versions and previous versions
+      Following actions can now be done:
+        Transition to the standard : IA
+        Archive to the Glacier
+        Permanently Delete.

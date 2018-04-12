@@ -1,0 +1,2 @@
+- By default, an new user which has just created only has Access ID - Secret key . It's used for interact with CLI or API. 
+- User must be granted permission to access AMZ console resources
